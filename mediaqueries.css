@@ -1,108 +1,196 @@
-
+/* General styles for screens up to 1400px */
 @media screen and (max-width: 1400px) {
-    #profile {
-      height: 83vh;
-      margin-bottom: 6rem;
-      
-    }
-    .about-containers {
-      flex-wrap: wrap;
-    }
-    #contact,
-    #projects {
-      height: fit-content;
-    }
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
   }
-  
-  @media screen and (max-width: 1200px) {
-    #desktop-nav {
-      display: none;
-    }
-    #hamburger-nav {
-      display: flex;
-    }
-    #experience,
-    .experience-details-container {
-      margin-top: 2rem;
-    }
-    #profile,
-    .section-container {
-      display: block;
-    }
-    .arrow {
-      display: none;
-    }
-    section,
-    .section-container {
-      height: fit-content;
-    }
-    section {
-      margin: 0 5%;
-    }
-    .section__pic-container {
-      width: 275px;
-      height: 275px;
-      margin: 0 auto 2rem;
-    }
-    .about-containers {
-      margin-top: 0;
-    }
-    
+  .about-containers {
+    flex-wrap: wrap;
   }
-  
-  @media screen and (max-width: 600px)
-   {
-    #contact,
-    footer {
-      height: 40vh;
-    }
-    #profile {
-      height: 83vh;
-      margin-bottom: 0;
-    }
-    article {
-      font-size: 1rem;
-    }
-    footer nav {
-      height: fit-content;
-      margin-bottom: 2rem;
-    }
-    .about-containers,
-    .contact-info-upper-container,
-    .btn-container {
-      flex-wrap: wrap;
-    }
-    .contact-info-container {
-      margin: 0;
-    }
-    .contact-info-container p,
-    .nav-links li a {
-      font-size: 1rem;
-    }
-    .experience-sub-title {
-      font-size: 1.25rem;
-    }
-    .logo {
-      font-size: 1.5rem;
-    }
-    .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
-      text-align: center;
-    }
-    .section__pic-container {
-      width: auto;
-      height: 46vw;
-      justify-content: center;
-    }
-    .section__text__p2 {
-      font-size: 1.25rem;
-    }
-    .title {
-      font-size: 2rem;
-    }
-    .text-container {
-      text-align: justify;
-      
-    }
+  #contact,
+  #projects {
+    height: fit-content;
   }
+}
+
+/* Styles for screens up to 1200px (typically tablets and smaller laptops) */
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+  #profile,
+  .section-container {
+    display: block;
+  }
+  .arrow {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+}
+
+/* Styles for screens up to 600px (typically mobile devices) */
+@media screen and (max-width: 600px) {
+  #contact,
+  footer {
+    height: auto;
+    padding-bottom: 2rem;
+  }
+  #profile {
+    height: auto;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+  }
+  article {
+    font-size: 1rem;
+  }
+  footer nav {
+    height: fit-content;
+    margin-bottom: 1rem;
+  }
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* Unhide social links and adjust their container for mobile */
+  .contact-info-container {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    display: flex; /* Use flexbox for internal alignment */
+    flex-direction: column; /* Stack icons and text vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 0.5rem; /* Space between each icon/text pair */
+    padding: 1rem 0; /* Add some vertical padding */
+  }
+
+  .contact-info-container img {
+    display: inline-block; /* Ensure icons are visible */
+    margin-right: 0.5rem; /* Space between icon and text */
+    vertical-align: middle; /* Align icon with text */
+    width: 24px; /* Adjust icon size as needed */
+    height: 24px; /* Adjust icon size as needed */
+  }
+
+  .contact-info-container p {
+    font-size: 1rem;
+    display: flex; /* Use flex for p and a inside */
+    align-items: center; /* Align icon and text vertically */
+    justify-content: center; /* Center the icon and text block */
+    margin-bottom: 0.5rem; /* Space between each social link item */
+  }
+
+  /* Specific adjustment for the email link to keep it clean */
+  .contact-info-container p a {
+      word-break: break-all; /* Helps long emails wrap */
+  }
+
+  .experience-sub-title {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .section__pic-container {
+    width: 70%;
+    max-width: 250px;
+    height: auto;
+    aspect-ratio: 1/1;
+    margin: 0 auto 2rem;
+  }
+  .section__text__p2 {
+    font-size: 1.1rem;
+  }
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .text-container {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  /* Adjustments for Projects section on small screens */
+  #projects .project-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  #projects .details-container {
+    width: 100%;
+  }
+
+  /* Adjustments for Certifications section on small screens */
+  .certificates-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .certificate-card {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+  .certificate-img {
+    margin-bottom: 1rem;
+  }
+
+  /* Adjustments for Skills section on small screens */
+  #skills .details-container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  #skills .article-container {
+    justify-content: center;
+  }
+
+  /* Contact form adjustments */
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 90%;
+    margin: 2rem auto;
+  }
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+  }
+  .submit-btn {
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
